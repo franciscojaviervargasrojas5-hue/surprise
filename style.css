@@ -1,25 +1,25 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    background-color: #ff758c;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
     text-align: center;
     color: #fff;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.15);
+    background: #ff8fa3;
     padding: 30px;
     border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 420px;
     width: 90%;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 h1 {
@@ -50,31 +50,75 @@ button {
     transition: 0.2s;
 }
 
-#btnSi {
-    background-color: #28a745;
+#btnSi, #btnSiguiente {
+    background-color: #2ecc71;
     color: white;
 }
 
-#btnSi:hover {
-    background-color: #218838;
+#btnSi:hover, #btnSiguiente:hover {
+    background-color: #27ae60;
     transform: scale(1.05);
 }
 
 #btnNo {
-    background-color: #dc3545;
+    background-color: #e74c3c;
     color: white;
     position: relative;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
-#mensajeFinal {
-    font-size: 20px;
+/* Ocultar todas las diapositivas salvo la activa */
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide.active {
+    display: block !important;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.photo-caption {
+    font-size: 15px;
+    margin-bottom: 20px;
+    min-height: 45px;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.carousel-nav button {
+    background-color: #fff;
+    color: #ff758c;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.carousel-nav button:hover {
+    background-color: #f1f1f1;
+}
+
+#counter {
     font-weight: bold;
-    color: #fff;
-    animation: fadeIn 1s ease-in-out;
+    font-size: 14px;
 }
 
 @keyframes fadeIn {
