@@ -84,7 +84,8 @@ button {
 .slide img {
     width: 100%;
     max-height: 300px;
-    object-fit: cover;
+    object-fit: contain; /* CORREGIDO: Muestra la foto entera sin recortarla */
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo sutil para rellenar espacios libres */
     border-radius: 12px;
     margin-bottom: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
