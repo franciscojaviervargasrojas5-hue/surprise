@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para alguien especial ❤️</title>
-    <!-- Aquí conectamos los estilos -->
+    <title>Para Kenia Luciano, El amor de mi vida ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- PANTALLA 1: Pregunta inicial -->
     <div class="container" id="mainContainer">
-        <h1>✨ Hay momentos que no se olvidan ✨</h1>
-        <p>Gracias por cada risa, cada momento y por hacer todo más bonito. ¿Te ha gustado esta pequeña sorpresa?</p>
+        <h1>✨ Todos nuestros momentos son mágicos ✨</h1>
+        <p>Gracias por cada risa, cada momento y por hacer todo más bonito desde el dia 1. ¿Te ha gustado esta pequeña sorpresa?</p>
         
         <div class="buttons">
             <button id="btnSi" onclick="aceptar()">¡Sí, mucho! ❤️</button>
@@ -19,12 +19,76 @@
         </div>
     </div>
 
+    <!-- PANTALLA 2: Confirmación previa a las fotos -->
     <div class="container hidden" id="successContainer">
         <h1>¡Sabía que dirías que sí! 🥰</h1>
-        <p id="mensajeFinal">Te quiero muchísimo. Este es solo un detalle para recordarte lo especial que eres para mí.</p>
+        <p>Te quiero muchísimo. Este es solo un detalle para recordarte lo especial que eres para mí .</p>
+        <button id="btnSiguiente" onclick="mostrarGaleria()">Ver nuestros recuerdos 📸</button>
     </div>
 
-    <!-- Aquí conectamos el código de JavaScript -->
+    <!-- PANTALLA 3: Carrusel de 10 Fotos con Mensajes -->
+    <div class="container hidden" id="galleryContainer">
+        <div class="carousel">
+            <!-- Foto 1 -->
+            <div class="slide active">
+                <img src="fotos/foto1.jpg" alt="Foto 1">
+                <p class="photo-caption">Aquí va el mensaje de nuestra primera foto juntos. ❤️</p>
+            </div>
+            <!-- Foto 2 -->
+            <div class="slide">
+               <img src="fotos/foto2.jpg" alt="Foto 2">
+                <p class="photo-caption">Un recuerdo increíble que siempre guardaré en mi mente.</p>
+            </div>
+            <!-- Foto 3 -->
+            <div class="slide">
+                <img src="fotos/foto3.jpg" alt="Foto 3">
+                <p class="photo-caption">Tu sonrisa es lo que más ilumina mis días.</p>
+            </div>
+            <!-- Foto 4 -->
+            <div class="slide">
+                <img src="fotos/foto4.jpg" alt="Foto 4">
+                <p class="photo-caption">Cada momento a tu lado se vuelve mi favorito.</p>
+            </div>
+            <!-- Foto 5 -->
+            <div class="slide">
+                <img src="fotos/foto5.jpg" alt="Foto 5">
+                <p class="photo-caption">Las pequeñas cosas contigo se vuelven gigantescas.</p>
+            </div>
+            <!-- Foto 6 -->
+            <div class="slide">
+                <img src="fotos/foto6.jpg" alt="Foto 6">
+                <p class="photo-caption">Imposible no sonreír al ver esta foto.</p>
+            </div>
+            <!-- Foto 7 -->
+            <div class="slide">
+               <img src="fotos/foto7.jpg" alt="Foto 7">
+                <p class="photo-caption">Gracias por ser mi compañía perfecta.</p>
+            </div>
+            <!-- Foto 8 -->
+            <div class="slide">
+               <img src="fotos/foto8.jpg" alt="Foto 8">
+                <p class="photo-caption">Sigamos coleccionando momentos así toda la vida.</p>
+            </div>
+            <!-- Foto 9 -->
+            <div class="slide">
+             <img src="fotos/foto9.jpg" alt="Foto 9">
+                <p class="photo-caption">Te elegí siempre, una , mil, infinitas  veces sin pensarlo.</p>
+            </div>
+            <!-- Foto 10 -->
+            <div class="slide">
+               <img src="fotos/foto10.jpg" alt="Foto 10">
+                <p class="photo-caption">Te amo con todo mi corazón. Por muchos más momentos juntos 💖</p>
+            </div>
+
+            <!-- Controles del carrusel -->
+            <div class="carousel-nav">
+                <button onclick="cambiarSlide(-1)">Anterior</button>
+                <span id="counter">1 / 10</span>
+                <button onclick="cambiarSlide(1)">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
