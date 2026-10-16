@@ -14,6 +14,14 @@ function moverNo() {
 function aceptar() {
     document.getElementById('mainContainer').classList.add('hidden');
     document.getElementById('successContainer').classList.remove('hidden');
+
+    // Reproducir la canción de fondo al aceptar
+    const musica = document.getElementById('miMusica');
+    if (musica) {
+        musica.play().catch(error => {
+            console.log("El navegador bloqueó la reproducción automática:", error);
+        });
+    }
 }
 
 function mostrarGaleria() {
